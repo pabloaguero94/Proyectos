@@ -1,0 +1,24 @@
+﻿@model ABMPersonas.Models.PersonaViewModel
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar</h2>
+
+@using (Html.BeginForm())
+{
+	<p>Nombre:</p> <br>
+	@Html.TextBoxFor(p => p.persona.Nombre)
+	<p>Apellido:</p> <br>
+	@Html.TextBoxFor(p => p.persona.Apellido)
+	<p>Edad:</p> <br>
+	@Html.TextBoxFor(p => p.persona.Edad)
+	<p>Estado Civil</p> <br>
+	@Html.DropDownListFor(p => p.persona.IdEstadoCivil,
+	new SelectList(@Model.listaec, "Id", "Nombre")
+	)
+
+	<input type="submit" value="Agregar">
+}
+

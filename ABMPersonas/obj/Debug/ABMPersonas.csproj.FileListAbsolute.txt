@@ -1,0 +1,174 @@
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\ABMPersonas.dll.config
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\ABMPersonas.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\ABMPersonas.pdb
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\csc.exe
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\csc.exe.config
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\csc.rsp
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\csi.exe
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\csi.exe.config
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\csi.rsp
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.AppContext.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Console.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.IO.Compression.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.IO.Pipes.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.Claims.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.ValueTuple.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Xml.XPath.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\vbc.exe
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\vbc.exe.config
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\vbc.rsp
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\VBCSCompiler.exe
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Antlr3.Runtime.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Newtonsoft.Json.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Helpers.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Mvc.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Optimization.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Razor.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.WebPages.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.WebPages.Razor.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\WebGrease.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Helpers.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Mvc.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Optimization.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.Razor.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.WebPages.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Web.WebPages.Razor.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Newtonsoft.Json.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Antlr3.Runtime.pdb
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.Optimization.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.Razor.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.WebPages.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\obj\Debug\ABMPersonas.csprojAssemblyReference.cache
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\obj\Debug\ABMPersonas.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\obj\Debug\ABMPersonas.csproj.CopyComplete
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\obj\Debug\ABMPersonas.dll
+C:\Users\alumno\Documents\Programacion3\ABMPersonas\ABMPersonas\obj\Debug\ABMPersonas.pdb
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\ABMPersonas.dll.config
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\ABMPersonas.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\ABMPersonas.pdb
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\csc.exe
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\csc.exe.config
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\csc.rsp
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\csi.exe
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\csi.exe.config
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\csi.rsp
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.AppContext.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Console.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.IO.Compression.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.IO.Pipes.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.Claims.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.ValueTuple.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Xml.XPath.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\vbc.exe
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\vbc.exe.config
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\vbc.rsp
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\VBCSCompiler.exe
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Antlr3.Runtime.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Newtonsoft.Json.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Helpers.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Mvc.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Optimization.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Razor.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.WebPages.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.WebPages.Razor.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\WebGrease.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Helpers.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Mvc.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Optimization.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.Razor.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.WebPages.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Web.WebPages.Razor.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Newtonsoft.Json.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Antlr3.Runtime.pdb
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.Optimization.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.Razor.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.WebPages.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\obj\Debug\ABMPersonas.csprojAssemblyReference.cache
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\obj\Debug\ABMPersonas.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\obj\Debug\ABMPersonas.csproj.CopyComplete
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\obj\Debug\ABMPersonas.dll
+C:\Users\alumno\Documents\Programacion III\ABMPersonas completo\ABMPersonas - copia\ABMPersonas\obj\Debug\ABMPersonas.pdb
