@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practica de Parcial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+    <h1>Encuesta de satisfacción</h1>
+    <form action="">
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" id="txtNombre"></td>
+            </tr>
+            <tr>
+                <td>Apellido:</td>
+                <td><input type="text" id="txtApellido"></td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td><input type="number" id="numEdad" min="0" max="120"></td>
+            </tr>
+            <tr>
+                <td>Opinión:</td>
+                <td>
+                    <input type="radio" name="rbtOpinion" id="opcMB" checked><label for="opcMB">Muy Bueno</label><br>
+                    <input type="radio" name="rbtOpinion" id="opcB"><label for="opcB">Bueno</label><br>
+                    <input type="radio" name="rbtOpinion" id="opcR"><label for="opcR">Regular</label>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Qué compró?</td>
+                <td>
+                    <input type="checkbox" id="chkCafeteria"><label for="chkCafeteria">Cafeteria</label><br>
+                    <input type="checkbox" id="chkPanaderia"><label for="chkPanaderia">Panaderia</label>
+            </tr>
+            <tr>
+                <td>¿Acepta enviar la encuesta?</td>
+                <td><input type="checkbox" id="chkAcepta"><label for="chkAcepta">Acepto los términos</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="left"><br>
+                    <input type="button" value="Enviar encuesta" id="btnEnviar" onclick="agregarEncuesta()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <input type="button" value="Lista de encuestados" id="btnLista" onclick="listarEncuestas()">
+    <br>
+    <div id="divLista"></div>
+
+</body>
+<script src="ClaseEncuesta.js"></script>
+<script src="Script.js"></script>
+
+</html>
