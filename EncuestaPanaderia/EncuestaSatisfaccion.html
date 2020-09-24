@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Encuesta Satisfaccion</title>
+    <link rel="stylesheet" href="Estilo.css">
+  </head>
+  <body>
+    <h1>Bienvenido a la encuesta de nuestra panaderia</h1>
+    <form>
+      Nombre completo: <input type="text" name="" id="txtNombre"/><br/>
+      Apellido: <input type="text" id="txtApellido"/><br/>
+      Edad: <input type="number" id="txtEdad"/><br/>
+      Opinion: <br/>
+      <input type="radio" checkedname="radioOpinion" id="Mala"><label for="Mala">Mala</label>
+      <input type="radio" name="radioOpinion" id="Buena"><label for="Buena">Buena</label>
+      <input type="radio" name="radioOpinion" id="MuyBuena"><label for="MuyBuena">Muy Buena</label><br/>
+      ¿Donde fue atendide?<br/>
+      <input type="checkbox" id="chkCafeteria"><label for="chkCafeteria">En cafeteria</label><br/>
+      <input type="checkbox" id="chkPanaderia"><label for="chkPanaderia">En Panaderia</label><br/>
+      <br/>
+      <br/>
+      <br/>
+      <input type="checkbox" id="chkAcepta"><label for="chkAcepta">¿Acepta los terminos y condiciones?</label><br/>
+      <br/>
+      <br/>
+      <input type="button" value="Enviar" onclick="agregarRespuesta()">
+      <input type="button" value="Listar" onclick="listarRespuestas()">
+    </form>
+
+    <script type="text/javascript" src="Formulario.js"></script>
+    <div id="div1"></div>
+  </body>
+</html>
