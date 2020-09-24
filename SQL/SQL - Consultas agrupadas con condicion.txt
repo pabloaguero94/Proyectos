@@ -1,0 +1,89 @@
+--PRACTICO 7
+--1. Se quiere saber la fecha de la primer venta, la cantidad total vendida y el importe total vendido por
+--vendedor para los casos en que el promedio de la cantidad vendida sea inferior o igual a 56.select v.cod_vendedor 'Codigo Vendedor', v.nom_vendedor+' '+v.ape_vendedor 'Nombre vendedor',min(fecha) 'Primer venta' , sum(cantidad) 'Cantidad vendida', sum(cantidad*pre_unitario) 'Importe vendido'from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura join vendedores v on f.cod_vendedor = v.cod_vendedorgroup by v.cod_vendedor, v.nom_vendedor+' '+v.ape_vendedorhaving avg(cantidad) <= 56
+
+--2.Liste el importe máximo y mínimo e importe total por factura y
+--por cliente donde el importe total sea entre 100 y 500.select f.nro_factura 'Nro factura', f.cod_cliente 'Codigo cliente', c.nom_cliente+' '+c.ape_cliente 'Nombre cliente',max(cantidad*pre_unitario) 'Monto maximo', min(cantidad*pre_unitario) 'Monto minimo',sum(cantidad*pre_unitario) 'Total gastado'from detalle_facturas df join facturas f on df.nro_factura = f.nro_facturajoin clientes c on f.cod_cliente = c.cod_clientegroup by f.nro_factura, f.cod_cliente, c.nom_cliente+' '+c.ape_clientehaving sum(cantidad*pre_unitario) between 100 and 500
+
+--3. Muestre la cantidad de artículos (ítems) distintos vendidos (cantidad de registros en el detalle) diario
+--por vendedor; para los casos en que esa cantidad de ítems sea 2 o más.select v.cod_vendedor 'Codigo vendedor', v.nom_vendedor+' '+v.ape_vendedor 'Vendedor',count(distinct df.cod_articulo), fecha 'Fecha'from detalle_facturas df join facturas f on df.nro_factura = f.nro_facturajoin vendedores v on f.cod_vendedor = v.cod_vendedorgroup by v.cod_vendedor, v.nom_vendedor+' '+v.ape_vendedor, fechahaving count(distinct df.cod_articulo) >= 2
+
+--4. Desde la administración se solicita un reporte que muestre el precio promedio, el importe total y el
+--promedio del importe vendido por artículo que no comiencen con “c”, que su
+--cantidad total vendida sea 100 o más o que ese importe total vendido sea superior a 700.
+select a.cod_articulo 'Codigo Art', a.descripcion 'Articulo',
+avg(df.pre_unitario) 'Precio promedio', sum(df.cantidad*df.pre_unitario) 'Importe total', 
+avg(df.cantidad*df.pre_unitario) 'Promedio del importe'
+from detalle_facturas df join articulos a on df.cod_articulo = a.cod_articulo
+where descripcion not like '[a-c]%'
+group by a.cod_articulo, a.descripcion
+having sum(df.cantidad) >= 100 OR sum(df.cantidad*df.pre_unitario) > 350
+
+--5. Muestre en un listado la cantidad total de artículos vendidos, el importe total y la fecha de la primer y
+--última venta por cada cliente, para lo números de factura que no sean los siguientes: 2, 12, 20, 17,
+--30 y que el promedio de la cantidad vendida oscile entre 2 y 6.
+select c.cod_cliente 'Cod Cliente', c.nom_cliente+' '+c.ape_cliente 'Nombre cliente',
+sum(cantidad) 'Cantidad vendida', sum(cantidad*pre_unitario) 'Importe total',
+min(fecha) 'Primer venta', max(fecha) 'Ultima venta'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join clientes c on c.cod_cliente = f.cod_cliente 
+where f.nro_factura not in (2,12,20,17,30)
+group by c.cod_cliente, c.nom_cliente+' '+c.ape_cliente
+having avg(cantidad) between 2 and 6
+
+--6. Emitir un listado que muestre la cantidad total de artículos vendidos, el importe total vendido y el
+--promedio del importe vendido por vendedor y por cliente; para los casos en que el importe total
+--vendido esté entre 200 y 600 y para códigos de cliente que oscilen entre 1 y 5.
+select  c.cod_cliente 'Cod Cliente', c.nom_cliente+' '+c.ape_cliente 'Nombre cliente',
+v.cod_vendedor 'Codigo vendedor', v.nom_vendedor+' '+v.ape_vendedor 'Vendedor',
+sum(cantidad) 'Cantidad vendida', sum(cantidad*pre_unitario) 'Importe total vendido',
+avg(pre_unitario) 'Promedio de importe vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura 
+join clientes c on f.cod_cliente = c.cod_cliente 
+join vendedores v on f.cod_vendedor = v.cod_vendedor
+where f.cod_cliente between 1 and 5
+group by c.cod_cliente, c.nom_cliente+' '+c.ape_cliente,
+v.cod_vendedor , v.nom_vendedor+' '+v.ape_vendedor
+having sum(cantidad*pre_unitario) between 200 and 600
+
+--7. Por cada factura emitida, se quiere saber el importe total y el promedio del importe, pero solo para
+--las facturas donde se hayan vendido más de 50 unidades de artículos en total y el importe total de la
+--factura sea superior a 500. 
+select f.nro_Factura 'Nro factura',
+sum(cantidad*pre_unitario) 'Importe total',
+avg(cantidad*pre_unitario) 'Promedio del importe'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+group by f.nro_factura
+having sum(cantidad) > 50 AND sum(cantidad*pre_unitario) > 500
+
+--8. Para los años 2008, 2010 o 2011 se quiere saber la cantidad total de artículos vendidos, el precio
+--promedio y el importe total vendido por día; donde el importe total diario inferior a 300. Ordene por
+--importe en forma descendente.
+select fecha 'Fecha',
+sum(cantidad) 'Cantidad de articulos vendidos', avg(pre_unitario) 'Precio promedio', sum(cantidad*pre_unitario) 'Importe total vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where year(fecha) in (2008,2010,2011)
+group by fecha
+having sum(cantidad*pre_unitario) < 300
+
+--9. Muestre la cantidad total de artículos y el promedio del importe total vendido diario por cliente; para
+--los casos en que el importe total vendido sea inferior a 150 y que el promedio de la cantidad de
+--artículos vendidos sea inferior a 20.
+select c.cod_cliente 'Codigo cliente', c.nom_cliente+' '+c.ape_cliente 'Nombre cliente', fecha 'Fecha',
+sum(cantidad) 'Cantidad vendida', avg(cantidad*pre_unitario) 'Promedio del importe vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join clientes c on f.cod_cliente = c.cod_cliente
+group by c.cod_cliente, c.nom_cliente+' '+c.ape_cliente, fecha
+having sum(cantidad*pre_unitario) < 150 AND avg(cantidad) < 20
+
+--10. Liste el promedio y la cantidad total de artículos vendidos, el importe total y el promedio del importe
+--que cada vendedor realizó por año, para las ventas realizadas anteriores al 1/1/2008 y que el
+--importe total no supere los $ 850.
+select year(fecha)'Año', v.cod_vendedor 'Codigo vendedor', v.nom_vendedor+' '+v.ape_vendedor 'Vendedor',
+avg(cantidad) 'Promedio de cantidad', sum(cantidad) 'Cantidad vendida',
+sum(cantidad*pre_unitario) 'Total vendido', avg(cantidad*pre_unitario) 'Promedio vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join vendedores v on v.cod_vendedor = f.cod_vendedor
+where fecha < '01/01/2008'
+group by year(fecha), v.cod_vendedor, v.nom_vendedor+' '+v.ape_vendedor 
+having sum(cantidad*pre_unitario) <= 850

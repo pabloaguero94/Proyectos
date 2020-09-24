@@ -1,0 +1,95 @@
+--Practico 1
+insert into articulos (descripcion, pre_unitario)
+values ('110537-Lápices Color largos * 12 u', 21.50)
+
+select cod_articulo 'Codigo de articulo', descripcion 'Descrípcion', stock_minimo 'Stock minimo', pre_unitario 'Precio
+unitario'
+from articulos
+order by pre_unitario, descripcion
+
+select cod_cliente 'Codigo', nom_cliente+' '+ape_cliente 'Nombre completo', calle+' '+altura 'Domicilio',
+cod_barrio 'Codigo barrio', nro_tel 'Telefono'
+from clientes
+where nro_tel is not null
+
+--1) Se quiere saber la cantidad de clientes que hay en la empresa.select count(*)from clientes--
+
+2) Se quiere saber qué cantidad de vendedores hay en la empresaselect count(*) 'Cantidad de vendedores'from vendedores--
+
+3) Se quiere saber el promedio de la cantidad total de artículos vendidos.
+select avg(cantidad) 'Promedio de articulos vendidos'from detalle_facturas--
+
+4) Se quiere saber la cantidad de ventas que hizo el vendedor de código 3.select count(*)from facturaswhere cod_vendedor = 3--
+
+5) ¿Cuál fue la fecha de la primera y última venta que se realizó en este negocio?
+select min(fecha) 'Primer venta', max(fecha) 'Ultima venta'from facturas
+6) Se quiere saber cual fue la maxima y la minima cantidad que se vendio para el articulo 8.select min(cantidad), max(cantidad)from detalle_facturas where cod_articulo = 8
+7) Mostrar la siguiente información respecto a la factura nro.: 450: cantidad total de unidades vendidas,
+la cantidad de artículos diferentes vendidos y el importe total.s
+elect sum(cantidad), count(*), sum(cantidad*pre_unitario) from detalle_factura
+swhere nro_factura = 4508) ¿Cuál fue el cantidad total de unidades vendidas, importe total y el importe promedio para
+vendedores cuyo nombres comienzan con letras que van de la “d” a la “l”?select sum(df.cantidad) 'Cantidad vendida', sum(df.cantidad*df.pre_unitario) 'Importe total', avg(df.cantidad*df.pre_unitario) 'Importe promedio'from detalle_facturas df join facturas f on f.nro_factura = df.nro_facturajoin vendedores v on f.cod_vendedor = v.cod_vendedorwhere nom_vendedor like '[d-l]%'
+
+9) Obtener el promedio y el monto vendido de toda la facturación de este negocio. Mostrar además la
+cantidad de unidades vendidas y el promedio de las unidades vendidas..select sum(cantidad*pre_unitario), avg(cantidad*pre_unitario), sum(cantidad), avg(cantidad)from detalle_facturas--
+
+10) Se quiere saber el importe total vendido, el promedio del importe vendido y la cantidad total de
+artículos vendidos para el cliente Roque Paez.
+select sum(cantidad*pre_unitario) 'importe vendido', avg(cantidad*pre_unitario) 'Promedio de importe vendido',
+count(cod_articulo)
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join clientes c on f.cod_cliente = c.cod_cliente
+where c.nom_cliente = 'Roque' and c.ape_cliente = 'Paez'
+
+11) Mostrar la fecha de la primera venta, la cantidad total vendida y el importe total vendido para los
+artículos que empiecen con “C”.
+select min(fecha) 'Primer venta', sum(df.cantidad) 'Cantidad vendida'
+, sum(df.cantidad*df.pre_unitario) 'Importe total vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join articulos a on df.cod_articulo = a.cod_articulo
+where descripcion like 'C%'
+
+12) Se quiere saber la cantidad total de artículos vendidos y el importe total vendido para el periodo del
+15/06/2008 al 15/06/2011
+select sum(cantidad) 'Cantidad total vendida', sum(cantidad*pre_unitario) 'Importe total vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where f.fecha between '15/06/2008' and '15/06/2011'
+
+13) Se quiere saber la cantidad de veces y la última vez que vino el cliente de apellido Abarca y cuánto
+gastó en total.
+select count(*) 'Veces que vino', max(f.fecha), sum(df.cantidad*df.pre_unitario) 'Total gastado'
+from facturas f join detalle_facturas df on f.nro_factura = df.nro_factura 
+join clientes c on c.cod_barrio = f.cod_cliente
+where ape_cliente = 'abarca'
+
+14) Mostrar el importe total y el promedio del importe para los clientes cuya dirección de mail es
+conocida.
+select sum(cantidad*pre_unitario) 'Importe total', avg(cantidad*pre_unitario) 'Promedio'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura 
+join clientes c on f.cod_cliente = c.cod_cliente
+where [e-mail] is not null
+
+15) Obtener la siguiente información: el importe total vendido y el importe promedio vendido para
+--números de factura que no sean los siguientes: 13, 5, 17, 33, 24.
+select sum(cantidad*pre_unitario) 'Importe total vendido', avg(cantidad*pre_unitario) 'Importe promedio vendido'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where f.nro_factura not in (13,5,17,33,24)
+
+16) El encargado del negocio quiere saber cuanto fue la facturacion del año pasado. Por otro lado cuanto es la facturacion del mes pasado, la de este mes y la de hoy.
+select sum(cantidad*pre_unitario) 'Facturacion'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where year(fecha) = year(getdate()) -1
+
+select sum(cantidad*pre_unitario) 'Facturacion'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where month(fecha) = MONTH(getdate()) -1 AND
+year(fecha) = year(getdate()) 
+
+select sum(cantidad*pre_unitario) 'Facturacion'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where fecha = GETDATE()
+
+17) Se quiere saber la cantidad de ventas, la cantidad total vendida y el importe promedio vendido para una factura determinada por ejemplo la nro. 512. 
+select count(*) 'Cantidad ventas', sum(cantidad*pre_unitario) 'Cantidad vendida', avg(Cantidad*pre_unitario) 'PROMEDIO'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where f.nro_factura = 512

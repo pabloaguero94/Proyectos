@@ -1,0 +1,39 @@
+Se quiere saber dentro del año en curso, cuánto fue el total pagado en concepto de mantenimientos a cada mecánico mensualmente, cuánto fue lo más caro y lo más barato pero solo aquellos en los que la cantidad de mantenimientos haya superado los 10. Rotule. (15%)
+
+select month(fec_mantenim) 'Mes', me.cod_mecanico 'Codigo mecanico', me.nom_mecanico 'Mecanico',
+sum(monto) 'Monto pagado', max(monto) 'Mas caro', min(monto) 'Mas barato'
+from mantenimientos ma join mecanicos me on ma.cod_mecanico = me.cod_mecanico
+where year(fecha) = year(getdate())
+group by month(fec_mantenim), m.cod_mecanico, m.nom_mecanico
+having count(*) > 10
+
+Emitir un listado de mecánicos que realizaron mantenimientos en los dos últimos meses de este año, a autos fiat, peugeot y chevrolet, cuyos responsables tienen teléfonos o dirección conocidos y cuyo mantenimiento haya costado entre $1000 y $3000. Ordene por especialidad de mecánico en forma descendente y luego por nombre.(15%)
+
+select me.cod_mecanico 'Codigo mecanico', me.nom_mecanico 'Mecanico'
+from mantenimientos ma join mecanicos me on ma.cod_mecanico = me.cod_mecanico
+join unidades u on ma.cod_unidad = u.cod_unidad
+join responsables re on u.cod_responsable = re.cod_responsable
+where month(fec_mantenim) <= dateadd(month,-2,gerdate())
+AND marca in ('Fiat','Peugeot','Chevrolet') 
+AND (tel_responsable is not null OR direccion is not null)
+AND monto between 1000 and 3000
+order by especialidad desc, nom_mecanico
+
+¿Cuánto se pagó en concepto de mantenimientos el año pasado y cuál fue el monto promedio de cada uno? (10%)
+
+select sum(monto) 'Pagado en mantenimientos', avg(monto) 'Pago promedio'
+from mantenimientos
+where year(fec_mantenimiento) = year(getdate()) -1
+
+Se quiere emitir un listado de responsables de unidades y uno de mecánicos pero que el resultado aparezca en una misma tabla, donde primero se muestren los responsables y luego los mecánicos ordenados alfabéticamente por nombre. (10%)
+
+Select	cod_responsable Código, nombre Nombre, tel_responsable Teléfono,
+‘Responsable’ Tipo
+From responsables
+UNION
+Select cod_mecanico, nom_mecanico, tel_mecanico, ‘Mecánico’ 
+From mecanicos
+Order by 4 desc, 2
+
+
+

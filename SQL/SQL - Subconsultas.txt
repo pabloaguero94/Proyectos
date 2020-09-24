@@ -1,0 +1,110 @@
+--1. Emitir un listado de los artículos que no fueron vendidos este año. En ese listado solo incluir
+--aquellos cuyo precio unitario del artículo oscile entre 20 y 50.
+select a.descripcion 'Articulo', a.cod_articulo 'Codigo'
+from articulos a
+where cod_articulo not in (select df.cod_articulo
+						   from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+						   where year(f.fecha) = year(getdate())
+						   )
+AND pre_unitario between 20 and 50 
+
+--2. Genere un reporte con los clientes que vinieron más de 2 veces el año pasado. 
+select c.cod_cliente 'Codigo', c.nom_cliente+' '+c.ape_cliente 'Nombre'
+from clientes c
+where 2 < (select count(*)
+		   from facturas f
+		   where year(fecha) = year(getdate()) -1
+		   and cod_cliente = c.cod_cliente
+		   )
+
+----3. Se quiere saber qué clientes no vinieron entre el 12/12/2007 y el 13/7/2010.
+select c.cod_cliente 'Codigo', c.nom_cliente+' '+c.ape_cliente
+from clientes c
+where c.cod_cliente not in (select cod_cliente	
+								from facturas 
+								where fecha between '12/12/2007' and '13/07/2010'
+								and cod_cliente = c.cod_cliente
+								)
+
+--4. Liste los datos de las facturas de los clientes que solo vienen a comprar en febrero es decir que
+--todas las veces que vino a comprar haya sido en el mes de febrero (y no otro mes).
+
+
+--5. Muestre los datos de las facturas para los casos en que por año se hayan hecho menos de 9
+--facturas.
+select f.nro_factura 'Nro factura', f.fecha 'Fecha'
+from facturas f
+where 9 > (select count(*)
+			from facturas f1
+			where year(f.fecha) = year(f1.fecha)
+			)
+
+--6. Emita un reporte con las facturas cuyo importe total haya sido superior a 300 (incluya en el reporte
+--los datos de los artículos vendidos y los importes). 
+select f.nro_factura 'Nro factura', f.fecha 'Fecha', a.descripcion 'Articulo', df.cantidad*df.pre_unitario
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join articulos a on df.cod_articulo = a.cod_articulo
+where 300 < (select sum(cantidad*pre_unitario)
+			from detalle_facturas df1
+			where df1.nro_factura = df.nro_factura
+			)
+
+--7. Se quiere saber qué vendedores nunca atendieron 
+--a estos clientes: 1 y 6. Muestre solamente el
+--nombre del vendedor.
+select v.nom_vendedor+' '+v.ape_vendedor 'Vendedor'
+from vendedores v
+where cod_vendedor not in (select f.cod_vendedor
+				  from facturas f
+				  where f.cod_cliente not in (1,6)
+				  )
+
+--8.Listar los datos de los artículos que superaron
+--el promedio del Importe de ventas de $ 200.
+select a.descripcion 'Articulo', a.cod_articulo 'Codigo'
+from articulos a
+where 200 < (select avg(df.cantidad*df.pre_unitario)
+			 from detalle_facturas df
+			 where a.cod_articulo = df.cod_articulo
+			 )
+order by a.cod_articulo
+
+--9. Que artículos nunca se vendieron? Tenga además 
+--en cuenta que su nombre comience con letras
+--que van de la “d” a la “p”. Muestre solamente la 
+--descripción de artículo.
+select a.descripcion 'Descripcion'
+from articulos a
+where not exists (select cod_articulo
+				  from detalle_facturas df
+				  where df.cod_articulo = a.cod_articulo
+				  )
+		AND descripcion not like '[d-p]%'
+
+--10. Liste número de factura, fecha y cliente para los casos en que ese cliente haya sido atendido alguna
+--vez por el vendedor de código 3.
+select f.nro_Factura 'Nro Fact', f.fecha 'Fecha', c.cod_cliente 'Cod cliente',
+c.nom_cliente+' '+c.ape_cliente 'Nombre'
+from clientes c join facturas f on c.cod_cliente = f.cod_cliente
+where 3 = any (select cod_vendedor
+			from facturas f1
+			where f1.cod_cliente = c.cod_cliente
+						)
+
+--11.Listar número de factura, fecha, artículo, cantidad 
+--e importe para los casos en que todas las cantidades 
+--(de unidades vendidas de cada artículo) de esa factura 
+--sean superiores a 40.
+select f.nro_factura 'Numero fact', f.fecha 'Fecha', a.cod_articulo 'Cod articulo', a.descripcion 'Articulo',
+df.cantidad 'Cantidad', df.cantidad*df.pre_unitario 'Importe'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join articulos a on a.cod_articulo = df.cod_articulo
+where 40 < all (select cantidad	
+			from detalle_facturas
+			where nro_factura = f.nro_factura
+			)
+
+--12. Emitir un listado que muestre número de factura, fecha, artículo, cantidad e importe; para los casos
+--en que la cantidad total de unidades vendidas sean superior a 80.select f.nro_factura 'Nro factura', fecha 'Fecha', a.descripcion 'Articulo', df.cantidad 'Cantidad',df.cantidad*df.pre_unitario 'Importe'from facturas f join detalle_facturas df on f.nro_factura = df.nro_facturajoin articulos a on df.cod_articulo = a.cod_articulowhere 80 <  (select sum(cantidad) 			from detalle_facturas			where nro_factura = f.nro_factura			)--13.Liste número de factura, fecha, cliente, artículo 
+--e importe para los casos en que alguno de los importes 
+--de esa factura sean menores a 100. select f.nro_factura 'Nro factura', fecha 'Fecha', c.cod_cliente 'Cod Cliente',c.nom_cliente+' '+c.ape_cliente 'Cliente', a.cod_articulo 'Cod Articulo', a.descripcion 'Articulo',df.cantidad*df.pre_unitario 'Importe'from facturas f join detalle_facturas df on f.nro_factura = df.nro_facturajoin articulos a on df.cod_articulo = a.cod_articulojoin clientes c on c.cod_cliente = f.cod_clientewhere 100 > any (select cantidad*pre_unitario				 from detalle_facturas				 where nro_factura = f.nro_factura				 )

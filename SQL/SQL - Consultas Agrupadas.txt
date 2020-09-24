@@ -1,0 +1,64 @@
+PRACTICO 6
+1. Por cada factura emitida mostrar la cantidad total de artículos vendidos (suma de las cantidades
+vendidas), la cantidad ítems que tiene cada factura en el detalle (cantidad de registros de detalles) y
+el Importe total.select nro_factura, sum(cantidad) 'Cantidades vendidas', count(*) 'Items', sum(cantidad*pre_unitario) 'Importe'from detalle_facturasgroup by nro_factura2. Se quiere saber en este negocio, cuánto se factura:
+a. Diariamente
+b. Mensualmente
+c. Anualmente 
+
+select fecha, sum(cantidad*pre_unitario) 'Facturacion'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+group by fecha
+
+select month(fecha) 'Mes', year(fecha) 'Año', sum(cantidad*pre_unitario) 'Facturacion'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+group by month(fecha), year(fecha)
+
+select year(fecha) 'Año', sum(cantidad*pre_unitario) 'Facturacion'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+group by year(fecha)
+order by 1
+
+3. Emitir un listado de la cantidad de facturas confeccionadas diariamente, correspondiente a los
+meses que no sean enero, julio ni diciembre. Ordene por la cantidad de facturas en forma descendente y fecha
+select count (*), fecha
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+where month(fecha) not in (1,7,12)
+group by fecha
+
+4.Mostrar la cantidad total de artículos vendidos, el importe total vendido y la fecha de la primer venta por cliente, para nombres de cliente que no empiecen con “p”. 
+select c.cod_cliente 'Cod Cliente', c.nom_cliente+' '+c.ape_cliente 'Nombre Cliente',
+sum(cantidad) 'Cantidad total', sum(cantidad*pre_unitario) 'Importe total vendido',
+min (fecha) 'Primer venta'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join clientes c on f.cod_cliente = c.cod_cliente
+where c.nom_cliente not like 'p%'
+group by c.cod_cliente, c.nom_cliente+' '+c.ape_cliente
+
+5. Se quiere saber la cantidad y el importe promedio vendido por fecha y cliente, para códigos de
+vendedor superiores a 2. Ordene por fecha y cliente.select c.cod_cliente 'Cod Cliente', c.nom_cliente+' '+c.ape_cliente 'Nombre Cliente', fecha 'Fecha',sum(cantidad) 'Cantidad vendida', avg(cantidad*pre_unitario) 'Promedio vendido'from detalle_facturas df join facturas f on df.nro_factura = f.nro_facturajoin clientes c on f.cod_cliente = c.cod_cliente join vendedores v on v.cod_vendedor = f.cod_vendedorwhere f.cod_vendedor > 2group by c.cod_cliente, c.nom_cliente+' '+c.ape_cliente, fecha
+
+6. Se quiere saber el importe promedio vendido y la cantidad total vendida por fecha y artículo, para
+códigos de cliente inferior a 3. Ordene por fecha y artículo.
+select a.cod_articulo 'Codigo articulo', descripcion 'Articulo', avg(cantidad*df.pre_unitario) 'Importe promedio vendido',
+sum(cantidad) 'Cantidad vendida', fecha 
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura
+join clientes c on c.cod_cliente = f.cod_cliente
+join articulos a on a.cod_articulo = df.cod_articulo
+where f.cod_cliente < 3
+group by a.cod_articulo, descripcion, fecha
+
+7. Listar la cantidad total vendida, el importe total vendido y el importe promedio total vendido por número de factura, siempre que la fecha no oscile entre el 13/2/2007 y el 13/7/2010.select f.nro_factura 'Nro factura', sum(cantidad) 'Cantidad total vendida', sum(cantidad*pre_unitario) 'Importe vendido',avg(cantidad*pre_unitario) 'Promedio vendido'from detalle_facturas df join facturas f on df.nro_factura = f.nro_facturawhere fecha not between '13/02/2007' and '13/07/2010'group by f.nro_factura9. Emitir un reporte que muestre la fecha de la primer y última venta y el importe comprado por cliente.
+Rotule como CLIENTE, PRIMER VENTA, ÚLTIMA VENTA, IMPORTE
+select c.cod_cliente ' Codigo cliente ' , c.nom_cliente+' '+c.ape_cliente 'Cliente',
+min(fecha) 'Primer venta', max(fecha) 'Ultima venta', sum(cantidad*pre_unitario) 'Importe'
+from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura join clientes c on f.cod_cliente = c.cod_cliente	
+group by c.cod_cliente, c.nom_cliente+' '+c.ape_cliente
+
+10. Se quiere saber el importe total vendido, la cantidad total vendida y el precio unitario promedio por cliente y artículo, siempre que el nombre del cliente comience con letras que van de la “a” a la “m”.
+Ordene por cliente, precio unitario promedio en forma descendente y artículo. Rotule como IMPORTE TOTAL, CANTIDAD TOTAL, PRECIO PROMEDIO.
+select  c.nom_cliente+' '+c.ape_cliente 'Cliente', a.cod_articulo 'Codigo Art', a.descripcion 'Articulo',sum(df.cantidad*df.pre_unitario) 'Importe total', sum(cantidad) 'Cantidad total', avg(df.pre_unitario) 'Precio promedio'from detalle_facturas df join articulos a on df.cod_articulo = a.cod_articulo join facturas f on df.nro_factura = f.nro_facturajoin clientes c on f.cod_cliente = c.cod_clientewhere nom_cliente like '[a-m]%'group by c.nom_cliente+' '+c.ape_cliente, a.cod_articulo, a.descripcionorder by 1,3,6 desc11. Mostrar la fecha de la primera venta y la cantidad de ventas (cantidad de registros en el detalle) por vendedor, para el año pasado.select v.cod_vendedor 'Codigo vendedor', v.nom_vendedor+' '+v.ape_vendedor 'Vendedor',min(fecha) 'Primer venta', max(fecha) 'Ultima venta', count(*)from detalle_facturas df join facturas f on df.nro_factura = f.nro_factura join vendedores v on f.cod_vendedor = v.cod_vendedor
+where year(fecha) = year(getdate()) -1group by v.cod_vendedor, v.nom_vendedor+' '+v.ape_vendedor
+12. Se quiere saber la cantidad de facturas y la fecha la primer y última factura por vendedor y cliente, para números de factura que oscilan entre 5 y 30. Ordene por vendedor, cantidad de ventas en forma descendente y cliente.select v.cod_vendedor 'Codigo vendedor', v.nom_vendedor+' '+v.ape_vendedor 'Vendedor', c.nom_cliente+' '+c.ape_cliente 'Cliente', count(*) 'Cantidad facturas', min(fecha) 'Primer venta', max(fecha) 'Ultima venta' 
+from facturas f join clientes c on f.cod_cliente = c.cod_cliente join vendedores v on f.cod_vendedor = v.cod_vendedor 
+where f.nro_factura between 5 and 30 group by v.cod_vendedor, v.nom_vendedor+' '+v.ape_vendedor, c.nom_cliente+' '+c.ape_cliente  order by 1,2,4
