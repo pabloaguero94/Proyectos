@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carga de pedidos</title>
+    <link rel="stylesheet" href="Estilo.css">
+  </head>
+  <body>
+      <h1>Solicitud de transporte</h1>
+        <form action="">
+          <table border = "2" align= "center">
+            <tr>
+              <td>Nombre completo del cliente: </td>
+              <td><input type="text" id="txtNombre"></td>
+            </tr>
+            <tr>
+              <td>Tipo de viaje solicitado: </td>
+              <td>
+                <input type="radio" name="rbtTipo" id="rbtPersonas" checked><label for="rbtPersonas">Taxi</label><br>
+                <input type="radio" name="rbtTipo" id="rbtFlete"><label for="rbtFlete">Flete</label><br>
+                <input type="radio" name="rbtTipo" id="rbtDelivery"><label for="rbtDelivery">Delivery</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Distancia aproximada en KM.: </td>
+              <td><input type="number" id="txtDistancia"></td>
+            </tr>
+            <tr>
+              <td>Precio estimado: </td>
+              <td><input type="number" id="txtPrecio"></td>
+            </tr>
+          </table>
+        </form>
+        <br>
+        <input type="button" value="Cargar pedido" id="btnCargaPedido" onclick="agregarPedido()">
+        <input type="button" value="Listar Pedidos e informacion" id="btnListarPedidos" onclick="listarPedidos()">
+        <br>
+        <div id="divLista"></div>
+  </body>
+  <script src="Script.js"></script>
+</html>

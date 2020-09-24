@@ -1,0 +1,27 @@
+body{
+  background: #D5D8DC;
+  text-align: center;
+  font-size: large;
+}
+
+table{
+  background-color: white;
+  text-align: center;
+  padding: inherit;
+  align-content: center;
+}
+
+h1{
+  font-variant: small-caps;
+  font-size: xx-large;
+  text-decoration: underline;
+}
+
+h2{
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+h3{
+  text-decoration: underline;
+}
