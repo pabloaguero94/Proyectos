@@ -1,0 +1,38 @@
+﻿@model SegundoParcialProg3.Models.AutosViewModel
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar Auto</h2>
+
+@using (Html.BeginForm())
+{
+	<table class= table>
+		<tr>
+			<td>Patente:</td> 
+			<td>@Html.TextBoxFor(x => x.Vehiculo.Patente)</td>
+		</tr>
+		<tr>
+			<td>Marca: </td>
+			<td>@Html.DropDownListFor(x => x.Vehiculo.IdMarca,new SelectList(@Model.listaMarcas,"IdMarca","Nombre"))</td>
+		</tr>
+		<tr>
+			<td>Kilometraje:</td>
+			<td>@Html.TextBoxFor(x => x.Vehiculo.Km)</td>
+		</tr>
+		<tr>
+			<td>Promocion?: </td>
+			<td>@Html.CheckBoxFor(x => x.Vehiculo.Promocion)</td>
+		</tr>
+		<tr>
+			<td>Precio:</td>
+			<td>@Html.TextBoxFor(x => x.Vehiculo.Precio)</td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Agregar"></td>
+			<td></td>
+		</tr>
+	</table>
+}
+

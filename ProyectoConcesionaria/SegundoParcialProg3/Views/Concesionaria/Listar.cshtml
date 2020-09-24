@@ -1,0 +1,36 @@
+﻿@using SegundoParcialProg3.Models;
+@model List<AutoMarca>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listado de Vehiculos</h2>
+
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Patente</th>
+		<th>Marca</th>
+		<th>Kilometraje</th>
+		<th>Promocion</th>
+		<th>Precio</th>
+	</tr>
+	</thead>
+	<tbody>
+@foreach (AutoMarca x in Model)
+{
+	<tr>
+		<td>@x.Patente</td>
+		<td>@x.Marca</td>
+		<td>@x.Kilometraje</td>
+		<td>@x.EstaOferta()</td>
+		<td>@x.Precio</td>
+	</tr>
+}
+	</tbody>
+</table>
+
+<a href="/Concesionaria/Agregar">Agregar Vehículo</a>
+
+

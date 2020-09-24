@@ -1,0 +1,12 @@
+﻿@using SegundoParcialProg3.Models;
+@model AutoMarca
+@{
+    ViewBag.Title = "AutoUsado";
+}
+
+<h2>Auto Menos Usado</h2>
+	<p><b>Patente:</b> @Model.Patente</p>
+		<p><b>Marca:</b> @Model.Marca</p>
+		<p><b>Kilometraje:</b> @Model.Kilometraje</p>
+		<p><b>Promocion:</b> @Model.EstaOferta()</p>
+		<p><b>Precio:</b> @Model.Precio</p>
