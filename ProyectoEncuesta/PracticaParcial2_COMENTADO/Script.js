@@ -1,4 +1,4 @@
-var txtNombre = document.getElementById("txtNombre");
+﻿var txtNombre = document.getElementById("txtNombre");
 var txtApellido = document.getElementById("txtApellido");
 var numEdad = document.getElementById("numEdad");
 var opcMB = document.getElementById("opcMB");
@@ -10,7 +10,7 @@ var chkAcepta = document.getElementById("chkAcepta");
 
 var divLista = document.getElementById("divLista"); // DEBO TOMAR EL OBJETO DIVLISTA PARA PODER PONERLE LA LISTA
 
-function estaCorrecto() { //VALIDACION DE LOS DATOS, se puede poner un alert por cada validacion indicando donde esta el error pero no tenia ganas
+function estaCorrecto() { //VALIDACION DE LOS DATOS
     if (txtNombre.value === "") {
         txtNombre.focus();
         return false;
